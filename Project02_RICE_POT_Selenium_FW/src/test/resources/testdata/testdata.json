@@ -1,0 +1,50 @@
+{
+    "validLoginScenarios": [
+        {
+            "testId": "TC_001",
+            "description": "Valid credentials — standard login",
+            "usernameKey": "valid.username",
+            "passwordKey": "valid.password",
+            "rememberMe": false,
+            "expectedOutcome": "LOGIN_SUCCESS"
+        },
+        {
+            "testId": "TC_002",
+            "description": "Valid credentials with Remember Me checked",
+            "usernameKey": "valid.username",
+            "passwordKey": "valid.password",
+            "rememberMe": true,
+            "expectedOutcome": "LOGIN_SUCCESS_WITH_REMEMBER_ME"
+        }
+    ],
+    "invalidLoginScenarios": [
+        {
+            "testId": "TC_003",
+            "description": "Valid email, incorrect password",
+            "usernameKey": "valid.username",
+            "passwordKey": "invalid.password",
+            "expectedOutcome": "ERROR_DISPLAYED"
+        },
+        {
+            "testId": "TC_004",
+            "description": "Invalid email, valid password",
+            "usernameKey": "invalid.username",
+            "passwordKey": "valid.password",
+            "expectedOutcome": "ERROR_DISPLAYED"
+        },
+        {
+            "testId": "TC_005",
+            "description": "Both fields empty",
+            "username": "",
+            "password": "",
+            "expectedOutcome": "VALIDATION_MESSAGE_DISPLAYED"
+        },
+        {
+            "testId": "TC_006",
+            "description": "Malformed email format",
+            "usernameKey": "malformed.email",
+            "passwordKey": "valid.password",
+            "expectedOutcome": "ERROR_DISPLAYED"
+        }
+    ]
+}

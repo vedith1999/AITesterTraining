@@ -1,0 +1,22 @@
+# Maven build output
+target/
+*.class
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Allure runtime output (generated at test execution time)
+allure-results/
+allure-report/
+
+# Sensitive credentials — copy config.properties.template and rename locally
+# src/test/resources/config.properties
